@@ -1,35 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-void menu();
-void fatorial();
 int main()
 {
-    menu();
-}
-menu (){
-    int n;
-    do {
-    printf("1 para fatorial, 2 para primo, 0 para sair \n");
-    scanf("%d", &n);
-    if (n == 0){
-        break;
-    }else if(n == 1){
-        fatorial();
-    }
-    else{
-        printf("Opcao invalida \n");
-    }
-    printf("Opcao digitada: %d \n", n);
-    }while (n != 0);
-}
-fatorial(){
-    int number, resultado = 1;
-    printf("Informe um numero para o fatoriak dele: \n");
-    scanf("%d", &number);
+    //Copiar String para uma variavel
+    char nome[7];
+    strcpy(nome, "Matheus");
+    printf("nome: %s \n", nome);
 
-    for(int r = number; r >= 1; r--){
-        resultado *= r;
+
+    //Comparar duas strings
+
+    char src[4] = "mat";
+    char dst[4] = "mat";
+    int rst;
+
+    rst = strcmp(src, dst);
+    if (rst == 0){
+        printf("'%s' igual a '%s'\n", src, dst);
+    }else if(rst < 0){
+        printf("'%s' menor que '%s'\n",src, dst);
+    }else if(rst > 0){
+        printf("'%s' maior que '%s'\n", src, dst);
+    }else
+    {
+        printf("Erro\n");
     }
-    printf("Resultado de %d! e: '%d' \n",number, resultado);
+
+    //Concatenar duas strings
+    char lang[12] = "Linguagem";
+    strcat(lang, " de Programacao C");
+
+    printf("%s e melhor que java\n", lang);
+
+    //Tamanho da string
+    int tamanho;
+    tamanho = strlen(lang);
+    printf("Tamanho da string %s e: %i",lang, tamanho);
+
+    return 0;
 }
+
