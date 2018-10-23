@@ -64,9 +64,6 @@ int len(char *src){
 
 bool comparar(char *dst, char *src){
 
-
-	int resultado;
-
     //Percorre as duas variaveis ate o final das duas em conjunto
 	for (int x = 0 ; dst[x] != '\0' && src[x] != '\0' ; x++){
         //Se a posicao da primeira for igual a posicao da segunda tiverem os mesmos valores retorna true
