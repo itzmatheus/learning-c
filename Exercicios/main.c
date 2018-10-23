@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-//DECLARANDO FUNCAO COPIAR, TAMANHO, COMPARAR
+//DECLARANDO FUNCAO COPIAR, TAMANHO, COMPARAR e CONCATENAR
 char * copiar(char *dst, char *src);
 int len(char *src);
 bool comparar(char *dst, char *src);
@@ -91,7 +91,7 @@ char *concatenar(char *dst, const char *src){
     //segundo for para saber o tamanho da string origem
     for (j = 0; src[j] != '\0'; j++){
 
-        //adiciona novas posições no array char de string com um valor da posicao da string de origem
+        //adiciona novas posiÃ§Ãµes no array char de string com um valor da posicao da string de origem
         dst[i+j] = src[j];
     }
 
